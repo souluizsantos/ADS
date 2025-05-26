@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #110f12;
+  color: #fff;
+  
+  padding: 20px;
+}
+
+/* Cabeçalho */
+.div_cabecalho {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #110F12;
+  padding: 5px;
+  list-style: none;
+  text-decoration: none;
+}
+ li {
+    cursor: pointer;
+}
+
+.sub__cabecalho {
+  font-size: 0.7rem;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: bold;
+
+}
+
+/* Título e introdução */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.destaque {
+   /* Primeiro passo: definir um degradê como fundo */
+  background-image: linear-gradient(to left, #1CD8B6, #07F602);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+  
+}
+
+.texto {
+  max-width: 660px;
+  font-size: 16px;
+  padding: 2px 5%;
+  color: #ffffff;
+}
+
+.imagem {
+  width: 100%; 
+}
+
+/* Cards */
+.texto_card1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0px;
+}
+
+.card2 {
+  background-color: #0c0c0c;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 0 15px rgba(53, 54, 54, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+
+.card2 h3, .servicos {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.card2 ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.card2 .text {
+  margin-bottom: 10px;
+}
+
+.cta {
+  display: flex; 
+  font-size: 20px;
+  padding: 12px 54px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background: linear-gradient(to right, #07F602, #1CD8B6); /* degradê */
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.cta:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 6px;
+  background-color: #1b1b1b;
+  color: #828080;
+  margin-top: 220px;
+  font-size: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  
+
+  .card2 {
+    margin: 10px 0;
+  }
+
+  .titulo {
+    font-size: 32px;
+  }
+
+  .texto {
+    font-size: 14px;
+  }
+  .cta {
+  display: flex; 
+  font-size: 14px;
+  padding: 12px 94px;
+  width: 100%;
+  }
+
+  .texto_card1 {
+  display: flex;
+  width: 100%;
+}
+
+.imagem {
+  width: 100%
+}
+}
